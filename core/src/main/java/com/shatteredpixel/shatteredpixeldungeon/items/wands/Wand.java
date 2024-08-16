@@ -378,7 +378,12 @@ public abstract class Wand extends Item {
 			// Morello func
 			// Date : 2024-07-08
 			// By	: DoggingDog
-			updateLevel();
+			if(hero != null){
+				Morello morello = hero.belongings.getItem(Morello.class);
+				if(morello != null){
+					updateLevel();
+				}
+			}
 
 			WandOfMagicMissile.MagicCharge buff = charger.target.buff(WandOfMagicMissile.MagicCharge.class);
 			if (buff != null && buff.level() > lvl && charger.target.buff(SpellQueue.tmpTracker.class)==null){
@@ -554,7 +559,7 @@ public abstract class Wand extends Item {
 
 		if (hero.belongings.contains(this) && hero.hasTalent(Talent.MAGIC_TACTICS)) {
 			int talentLevel = curUser.pointsInTalent(Talent.MAGIC_TACTICS);
-			int chance = 7 * talentLevel + (int) Math.floor(talentLevel / 2);
+			int chance = 7 * talentLevel + (int) Math.floor(talentLevel / 2f);
 			if (Random.Int(100) <= chance)
 				timeToZap = -hero.cooldown();
 		}
