@@ -68,7 +68,7 @@ abstract public class MissileWeapon extends Weapon {
 	
 	public static final float MAX_DURABILITY = 100;
 	protected float durability = MAX_DURABILITY;
-	protected float baseUses = 10;
+	/*protected*/public float baseUses = 10;
 	
 	public boolean holster;
 	
