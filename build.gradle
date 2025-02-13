@@ -7,7 +7,7 @@ buildscript {
         //接入FB后 直接打包安卓DEBUG会出错 若要调试请gradlew desktop:debug
         // PowerShell: ./gradlew desktop:debug
         // 打包直接选择release 签名食用MT默认的
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.8.0'
         classpath 'com.google.gms:google-services:4.3.15'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
     }
@@ -22,11 +22,11 @@ allprojects {
         appVersionCode = 240918
         appVersionName = '0.3.8-base2.4.2'
 
-        appJavaCompatibility = JavaVersion.VERSION_1_8
+        appJavaCompatibility = JavaVersion.VERSION_23 //1_8
 
-        appAndroidCompileSDK = 33
+        appAndroidCompileSDK = 35
         appAndroidMinSDK = 19
-        appAndroidTargetSDK = 33
+        appAndroidTargetSDK = 35
 
         gdxVersion = '1.11.0'
         gdxControllersVersion = '2.2.4-SNAPSHOT'
