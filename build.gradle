@@ -12,8 +12,8 @@ buildscript {
         // 打包直接选择release 签名食用MT默认的
         classpath 'com.android.tools:r8:8.7.18'
         classpath 'com.android.tools.build:gradle:8.7.3'
-        classpath 'com.google.gms:google-services:4.4.2'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
+//        classpath 'com.google.gms:google-services:4.4.2'
+//        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
     }
 }
 
@@ -26,7 +26,7 @@ allprojects {
         appVersionCode = 2505016
         appVersionName = '0.5.7-base2.4.2'
 
-        appJavaCompatibility = JavaVersion.VERSION_1_8
+        appJavaCompatibility = JavaVersion.VERSION_24
 
         appAndroidCompileSDK = 34
         appAndroidMinSDK = 19
