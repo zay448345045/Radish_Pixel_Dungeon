@@ -31,7 +31,7 @@ android {
             //Debug环境下会超方法 调用多Dex
             multiDexEnabled true
             //屏蔽CrashMap地图
-            firebaseCrashlytics {mappingFileUploadEnabled false}
+//            firebaseCrashlytics {mappingFileUploadEnabled false}
             versionNameSuffix '-INDEV'
             dependencies {
                 debugImplementation project(':services:updates:debugUpdates')
